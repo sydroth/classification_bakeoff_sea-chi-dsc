@@ -1,15 +1,17 @@
-# Bake Off 2: This Time it's for Classification
+# Bake Off
 
-![Baking](https://media.giphy.com/media/xT0xePLIUyxnXso8co/giphy.gif)
+![Baking](https://media.giphy.com/media/WvRgv9DdgJtPcIlTEI/giphy.gif)
 
 ## Challenge 
 
-The goal for this challenge is to predict whether a person will default on their loan. In doing so, we want to utilize all of the different tools we have learned over the course: data cleaning, EDA, feature engineering/transformation, feature selection, hyperparameter tuning, and model evaluation.
+The Bake Off challenge is a Kaggle-like format where you are given a set of data and tasked with building your best model on a set of training data. To do so, you employ all of the skills you have learned over the course: data cleaning, EDA, feature engineering/transformation, feature selection, hyperparameter tuning, and model evaluation.  Once you have settle on a model that performs to your standards, you apply that model to a set of test features.  You are not given the labels, so you only know how well your model performed until the challenge is over. This type of setup is not limited to Kaggle.  Groups who chose the Tanzanian well data had a similar set up.  The technical challenge portion of job interviews make take this form as well.  While the focus is on prediction, and there is a time limit, try to maintain some semblence of your workflow's process by adding appropriate markdown to your working notebook.  We will ask you to push your notebooks at the end.  While they won't be graded, your peers will appreciate insight into how you achieved your score. 
 
+The goal for this challenge is to predict whether a person will **default** on their loan. 
 The dataset comes from customers default payments in Taiwan.
+
 ## Data Files
 
-In this repo, just as before, you will find two csv files.
+In this repo, you will find two csv files:
 
 1. `train_data.csv`
 This includes the features and target variables that you will use to train a predictive model
@@ -45,10 +47,20 @@ This includes a testing set of data with the `defualt payment next month` column
 * PAY_AMT6: Amount of previous payment in April, 2005 (NT dollar)
 * default.payment.next.month: Default payment (1=yes, 0=no)
 
+
+## Instructions
+- Every team member fork and then clone this repo onto your computer. Figure out a strategy for how to collaborate, which may look like selecting one team member as the primary "coder".  We leave it to you to set-up a productive team dynamic, but keep in mind, the deliverable of this exercise is one csv file.   
+- Load up a Jupyter and start CRISP'ing.
+- The instructions for this bakeoff are limited with regards to modeling. Go wild. Use any model you want.  Feature engineer your head off.
+- Once you are satisfied with your model, or you find time running out, use the `test_features.csv` to predict a 0 or 1 signifying whether the individual defaulted on their loan.  See Submission guidelines below. 
+- Please be sure to use your own work.  If you have worked on this dataset before, don't copy and paste your previous work. Obviously there is no way that we can ask you not to use past experience, but we can ask you not to use past code.
+
+
+
 ## Submissions
 Save your predictions in a .csv file with the following pattern. 
 - `credit_default_preds_yourteaminitials.csv`
-- For example, if Brian and Erin were a team, their submission would look like `credit_default_preds_bmeh.csv`
+- For example, if Joél and Erin were a team, their submission would look like `credit_default_preds_jceh.csv`
 
 - There are different ways to turn arrays to .csv's.  You can use any method you choose, but be sure your submission has no heading, no index and one column. Your submission must match the number of records in the `test_features.csv`. Don't worry about rounding.  A valid submission could look like below. 
 
@@ -58,8 +70,9 @@ Save your predictions in a .csv file with the following pattern.
 1<br>
 ...
 
-- You will be given **3 hours** to build your best model using the training data. There is a hard cuttoff at 3 hours. Any late submissions will not be considered. 
-- Slack your .csv file to the `seattle-chicago-ds-012720` channel before time is up. Any submissions after the 3 hour deadline will be evaluated, but not included in the judging.
+- You will be given until **3 pm** CT/**1 pm** PT to submit to build your best model using the training data. Any late submissions will not be considered. 
+- We would usually cut you off after 3 hours, but we are giving you 4.5 hours so that you can attend  lunch hour with [Brad's Deals](https://www.bradsdeals.com/?acq=true&v=onboarding&utm_source=Google&utm_medium=Search&utm_campaign=preferencedbasedonboarding&utm_content=interestmanagement&c_id=4347&s=Google|Search|preferencebasedonboarding|interestmanagement&gclid=EAIaIQobChMIvOe7hKjU6gIVUvDACh2_Mg8OEAAYASAAEgK6b_D_BwE). 
+- Slack your .csv file to the `chicago-seattle-ds051120` channel before time is up. Any submissions after the deadline will be evaluated, but not included in the judging.
 
 ## Metrics
 Test results will be scored by F1-score. The group which submitted the predictions with the highest F1-score will be announced Monday morning. As a reward, they will receive a round of applause. 
